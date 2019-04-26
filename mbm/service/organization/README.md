@@ -1,6 +1,6 @@
 # grpc_go_service_example
 
-## About gRPC Go Organization Servicw Example
+## About gRPC Go Organization Service Example
 
 This example showcases using gRPC with Go to define and implement a simple Organization server and client.
 
@@ -46,23 +46,30 @@ Note: This will display the pid (process id) of the orgserver process. If you ne
 
 Using the Organization Client:
 To run the Organization Client, go to the /orgclient directory, ensure the client is built, then run the client:
+
 	./orgclient
 
 This will display the list of commands understood by the Organization Client, including:
-	List all Organizations - displays each Organization's Organization ID, Name and Description
+	List all Organizations - displays each Organization's Organization ID, Name and Description:
+
 		./orgclient orgs
 	 
-	Create an Organization w/ name and optional description - displays the new Organization's ID, Name and Description
+	Create an Organization w/ name and optional description - displays the new Organization's ID, Name and Description:
+
 		./orgclient orgs -name=<organizationname>  [-desc=<description>]
 	
-	List all Users - displays each User's User ID, Name and Organization ID
+	List all Users - displays each User's User ID, Name and Organization IDs:
+
 		./orgclient users
 
-	List all Users for a specific Organization - displayed each User's User ID and Name
+	List all Users for a specific Organization - displayed each User's User ID and Name:
+
 		./orgclient users -orgid=<organizationid>
 	
-	Add a User to a specific Organization  - displays the new User's User ID, Name and Organization ID
+	Add a User to a specific Organization  - displays the new User's User ID, Name and Organization ID:
+
 		./orgclient users -name=<username> -orgid=<organizationid>
+
 
 Note: In the above use cases, the Organization ID is displayed when you successfully create an Organization as well as when you list the Organizations. The Organization ID is a unique ID that must be used when displaying Users for a specific Organization or when adding a new User to an Organization.
 
