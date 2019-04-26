@@ -9,7 +9,7 @@ import (
 	"os"
 	"time"
 
-	pb "mbm/service/organization/organization"
+	pb "grpc_go_service_example/mbm/service/organization/organization"
 
 	"google.golang.org/grpc"
 )

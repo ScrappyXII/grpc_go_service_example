@@ -8,7 +8,7 @@ import (
 	"net"
 	"sync"
 
-	pb "mbm/service/organization/organization"
+	pb "grpc_go_service_example/mbm/service/organization/organization"
 
 	"github.com/twinj/uuid"
 	"google.golang.org/grpc"

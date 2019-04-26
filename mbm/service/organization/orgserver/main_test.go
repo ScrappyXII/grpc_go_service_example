@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	pb "mbm/service/organization/organization"
+	pb "grpc_go_service_example/mbm/service/organization/organization"
 	"testing"
 )
 
