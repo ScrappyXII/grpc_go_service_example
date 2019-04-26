@@ -27,6 +27,7 @@ The example requires the following already be installed:
 
 ## Source
 The code for the solution can be found under the /mbm/service/organization directory. Under this directory you can find:
+
 /orgserver		Organization Server
 /organization 		Organization gRPC proto package
 /orgclient		Organization Client
@@ -52,6 +53,7 @@ To run the Organization Client, go to the /orgclient directory, ensure the clien
 
 
 This will display the list of commands understood by the Organization Client, including:
+
 	List all Organizations - displays each Organization's Organization ID, Name and Description:
 		./orgclient orgs
 	 
