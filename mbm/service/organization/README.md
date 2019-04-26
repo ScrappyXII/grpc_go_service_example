@@ -39,6 +39,7 @@ NOTE: This example uses transient data for the Organization and User lists.
 
 ## Usage
 To start the Organization Server and run it in the background, go to the /orgserver directory, build the org server and run:
+
 	./orgserver &
 
 Note: This will display the pid (process id) of the orgserver process. If you need to stop the Organization Server, use the kill command with the pid of the orgserver process (eg, kill <pid>).
@@ -46,7 +47,9 @@ Note: This will display the pid (process id) of the orgserver process. If you ne
 
 Using the Organization Client:
 To run the Organization Client, go to the /orgclient directory, ensure the client is built, then run the client:
+
 	./orgclient
+
 
 This will display the list of commands understood by the Organization Client, including:
 	List all Organizations - displays each Organization's Organization ID, Name and Description:
