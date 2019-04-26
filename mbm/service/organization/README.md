@@ -8,7 +8,7 @@ The Organization gRPC service defines methods to:
 - Add an Organization
 - List all Organizations
 - Add a User to an Organization
-- Listing all Users from all Organizations
+- List all Users from all Organizations
 - List all Users for a specific Organization
 
 The solution is comprised of the following applications:
@@ -27,9 +27,9 @@ The example requires the following already be installed:
 
 ## Source
 The code for the solution can be found under the /mbm/service/organization directory. Under this directory you can find:
-/orgserver		  Organization Server
-/organization 	Organization gRPC proto package
-/orgclient		  Organization Client
+/orgserver		Organization Server
+/organization 		Organization gRPC proto package
+/orgclient		Organization Client
 
 Build: You can rebuild the Organization Server, Organization Client and/or Organization proto code by running 'go build' in the respective directories.
 
@@ -46,28 +46,22 @@ Note: This will display the pid (process id) of the orgserver process. If you ne
 
 Using the Organization Client:
 To run the Organization Client, go to the /orgclient directory, ensure the client is built, then run the client:
-
 	./orgclient
 
 This will display the list of commands understood by the Organization Client, including:
 	List all Organizations - displays each Organization's Organization ID, Name and Description:
-
 		./orgclient orgs
 	 
 	Create an Organization w/ name and optional description - displays the new Organization's ID, Name and Description:
-
 		./orgclient orgs -name=<organizationname>  [-desc=<description>]
 	
 	List all Users - displays each User's User ID, Name and Organization IDs:
-
 		./orgclient users
 
 	List all Users for a specific Organization - displayed each User's User ID and Name:
-
 		./orgclient users -orgid=<organizationid>
 	
 	Add a User to a specific Organization  - displays the new User's User ID, Name and Organization ID:
-
 		./orgclient users -name=<username> -orgid=<organizationid>
 
 
