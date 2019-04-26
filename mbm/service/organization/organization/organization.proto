@@ -1,0 +1,54 @@
+// Simple gRPC protocol definition for a simple Organization service 
+// - supports Creating and Listing Organizations
+// - supports Creating Users within Organizations and Listing All Users or Listing Users for a specific Organization
+// 
+// NOTE: to produce the Go PB file, use:
+//     protoc --go_out=plugins=grpc:. *.proto
+
+syntax = "proto3";
+package mbm.service.organization;
+
+service Organization {
+	rpc CreateOrganization(CreateOrganizationRequest) returns (OrganizationResponse) {}
+	rpc FetchOrganizationList(Empty) returns (OrganizationListResponse) {}
+
+	rpc CreateUser(CreateUserRequest) returns (UserResponse) {}
+	rpc FetchUserList(Empty) returns (UserListResponse) {}
+	rpc FetchUserListByOrganization(ByOrganizationRequest) returns (UserListResponse) {}
+}
+
+message Empty {}
+
+message CreateOrganizationRequest {
+	string name = 1;
+	string description = 2;
+}
+
+message OrganizationResponse {
+	string id = 1;
+	string name = 2;
+	string description = 3;
+}
+
+message OrganizationListResponse {
+	repeated OrganizationResponse organizations = 1;
+}
+
+message CreateUserRequest {
+	string organization_id = 1;
+	string name = 2;
+}
+
+message UserResponse {
+	string id = 1;
+	string organization_id = 2;
+	string name = 3;
+}
+
+message UserListResponse {
+	repeated UserResponse users = 1;
+}
+
+message ByOrganizationRequest {
+	string organization_id = 1;
+}
