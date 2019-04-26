@@ -22,7 +22,7 @@ The example requires the following already be installed:
 - Go 1.12.1 or higher (golang.org)
 - Go support for Protocol Buffers (https://github.com/golang/protobuf)
 - gRPC package (google.golang.org/grpc)
-- UUID packabe (github.com/twinj/uuid)
+- UUID package (github.com/twinj/uuid)
 
 
 ## Source
